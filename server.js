@@ -72,6 +72,54 @@ let recipes = {
             'step7': 'Pour over macaroni, then bake, or eat right away. Either way, enjoy!'
         }
     },
+    'creamcheese': {
+        'id': 3,
+        'name': 'creamcheese',
+        'mealType': 'breakfast',
+        'mealTypeAlt': 'sauces', 
+        'mainIngredientCategory': 'Cashews',
+        'personalPreference': 6,
+        'Ingredients':{
+            'cashews': '1cp.',
+            'coconutCream': '150g.',
+            'lacticAcid': '1tsp.',
+            'salt ': '1/2tsp.'
+        },
+        'Instructions':{
+            'step1': 'Pour boiling water over the cashews in a bowl and let sit for twenty minutes',
+            'step2': 'In a blender, add coconut cream, lactic acid, salt after the cashews. Blend until creamy.',
+            'step3': 'Put into fridge overnight',
+            'step4': 'Enjoy!!'
+        }
+    },
+    'tofuScramble': {
+        'id': 4,
+        'name': 'tofuScramble',
+        'mealType': 'breakfast',
+        'mealTypeAlt': '', 
+        'mainIngredientCategory': 'tofu',
+        'personalPreference': 8,
+        'Ingredients':{
+            'tofuExtraFirm': '16oz.',
+            'milk': '1/2cp.',
+            'turmeric': '1/2tsp.',
+            'blackSalt ': '1/2tsp.',
+            'chickenBroth': '1/4tsp.',
+            'kappacarragennan': '1/2tsp.',
+            'mushroomPowderOrNutrionalYeast': '1tsp.',
+            'oliveOil': '1tb.'
+        },
+        'Instructions':{
+            'step1': 'Press and drain tofu for about 20 minutes.',
+            'step2': 'Get 2 bowls, one tofu bowl and another for the blend',
+            'step3': 'In the blend bowl add milk, turmeric, salt, chicken broth, and kappa.',
+            'step4': 'In tofu bowl add tofu and mash with a potato masher.',
+            'step5': 'IN tofu bowl add turmeric',
+            'step6': 'Mix bowls then add mushroom powder or nutritional yeast.',
+            'step7': 'Heat frying pan with olive oil and fry up tofu mixture, let rest for 10 minutes to fluff up.',
+            'step8': 'Melt cheese on top and enjoy!!'
+        }
+    }
 
 }
 
