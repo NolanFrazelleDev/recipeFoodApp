@@ -2,6 +2,23 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const PORT = 8000
+const MongoClient = require('mongodb').MongoClient
+require('dotenv').config()
+
+let db,
+    dbConnectionStr = process.env.DB_STRING,
+    dbName = 'star-wars';
+
+MongoClient.connect(dbConnectionStr, (err, client) => {
+    if (err) return console.error(err)
+    console.log(`Connected to ${dbName} Database`)
+})
+
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
 
 app.use(cors())
 
