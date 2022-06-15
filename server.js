@@ -9,11 +9,11 @@ let db,
     dbConnectionStr = process.env.DB_STRING,
     dbName = 'star-wars';
 
-MongoClient.connect(dbConnectionStr, (err, client) => {
-    if (err) return console.error(err)
-    console.log(`Connected to ${dbName} Database`)
-})
-
+MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
+    .then(client => {
+        console.log(`Connected to ${dbName} Database`)
+        db = client.db(dbName)
+    })
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
@@ -140,8 +140,12 @@ let recipes = {
 
 }
 
-app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html')
+app.get('/',(request, response)=>{
+    db.collection('recipes').find().toArray()
+    .then(data => {
+        response.render('index.ejs', { info: data })
+    })
+    .catch(error => console.error(error))
 })
 app.get('/api/', (request, response) => {
     response.json(recipes)

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nolan Frazelle's Personal Vegan Recipe Book</h1>
+    <p><b>Note:</b>All of these ingredients are vegan and most of these recipe's come from non-vegan sources so if you want to delineate from my recipe, be wary of measurments.</p>
+<!-- This loops is to display current recipes-->    
+
+    <ul class="rappers">
+    <% for(let i=0; i < info.length; i++) {%>
+        <li class="rapper">
+            <span><%= info[i].stageName %></span>
+            <span><%= info[i].birthName %></span>
+            <span><%= info[i].likes %></span>
+            <span class='fa fa-thumbs-up'></span>
+            <span class='fa fa-trash'></span>
+        </li>
+    <% } %>
+    </ul>
+
+<!-- This section is to add a recipe-->
+    <h2>Add A Rapper:</h2>
+
+    <form action="/addRapper" method="POST">
+        <input type="text" placeholder="Meal Name" name="name">
+        <input type="text" placeholder="Main Ingredient" name="mainIngredientCategory">
+        <input type="text" placeholder="Personal Preference" name="personalPreference">
+        <input type="text" placeholder="Ingredient 1" name="ingredient1">
+        <input type="text" placeholder="Ingredient 1" name="ingredient1">
+        <input type="submit">
+    </form>
+    
+
+    <script src='js/main.js'></script>
+</body>
+</html>
